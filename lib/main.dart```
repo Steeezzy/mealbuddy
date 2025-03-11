@@ -1,0 +1,26 @@
+Let's update the main.dart file to include the landing screen for user and admin login:
+
+```dart:%2FUsers%2Fkarthikj%2Fdevelopment%2Fmealbuddy%2Flib%2Fmain.dart
+import 'package:flutter/material.dart';
+import 'screens/landing_screen.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'MealBuddy',
+      theme: ThemeData(
+        primaryColor: const Color(0xFF8BC34A),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF8BC34A)),
+        useMaterial3: true,
+      ),
+      home: const LandingScreen(),
+    );
+  }
+}
